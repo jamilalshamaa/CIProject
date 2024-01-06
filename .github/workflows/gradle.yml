@@ -30,10 +30,7 @@ jobs:
         distribution: 'temurin'
     - name: Make gradlew executable
       run: chmod +x ./server/gradlew
-    - name: Change to server directory
-      run: cd server
     - name: Build with Gradle
-      uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
+      uses: server/gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
       with:
-        gradle-executable: ./server/gradlew
         arguments: build
