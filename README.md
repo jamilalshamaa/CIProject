@@ -54,3 +54,52 @@ Now you can commit and push code
 git add .
 git commit -m "add StudentRessource"
 git push
+
+# Github Interface
+Create Pull Request
+Confirm Pull Request
+Go to actions and verify if the pull have successfully done
+
+Create a branch from a new issue. ‘feature/3-create-item-entity’
+
+# Terminal feature/-3
+git fetch origin
+git checkout feature/3-create-item-entity
+
+# IDE Interface
+Create 2 directory inside the server: domain, service
+Create files inside this directories
+
+# Terminal Feature/-3
+git add .
+git commit -m
+git push
+
+# Github Interface
+Create Pull Request
+Confirm Pull Request
+Go to actions and verify if the pull have successfully done
+
+# Terminal Main
+add the bootJar tasks to build.gradle 
+now try to build Project
+gradlew build
+and compile
+java -jar .\build\libs\server.jar
+
+# Install Docker
+install docker
+Open docker
+
+# IDE Interface
+create dockerfile
+
+copy this code inside your dockerfile and change the server.jar with your server.jar file
+FROM openjdk:21-oracle
+MAINTAINER baeldung.com
+COPY build/libs/server.jar server.jar
+ENTRYPOINT ["java", "-jar", "/server.jar"]
+
+run this commands:
+docker build --tag=server:latest .
+docker run -d -p 8080:8080 server
